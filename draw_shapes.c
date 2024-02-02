@@ -25,18 +25,33 @@ void print_triangle(int leftCol, int size)
     putchar('\n');
   }
 }
-/*
+
 void print_arrow(int leftCol, int size)
 {
+  
   for(int row = 0; row <= size; row++) {
     int leftBorder = leftCol + size - row;
     int rightBorder = leftCol + size + row;
     int col;
-    for (col = 0; col < minCol; col++){
-      putchar(' ')
+    for (col = 0; col < leftBorder; col++){
+      putchar(' ');
     }
+    for ( ; col <= rightBorder; col++){
+      putchar('*');
+    }
+    putchar('\n');
+  }
+
+  int leftSquareBorder = 1;
+  int rightSquareBorder = size - 1;
+  for(int row = 0; row <= size; row++) {
+    for(int col = 0; col < size; col++){
+      if (col >= leftSquareBorder && col <= rightSquareBorder){
+	putchar('*');
+      } else {
+	putchar(' ');
+      }
+    }
+    putchar('\n');
   }
 }
-*/
-
-
