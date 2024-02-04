@@ -30,8 +30,13 @@ int main()
 	print_char_5x7(c);
       break;
     case 'a':
+      /*
       puts("You selected arrow:");
       print_arrow(5,5);
+      */
+      puts("You seleccted an arrow:");
+      print_triangle(5,5);
+      print_square(8,5);
     case 'q':
       puts("Bye!");
       goto done; 		/* terminate */
